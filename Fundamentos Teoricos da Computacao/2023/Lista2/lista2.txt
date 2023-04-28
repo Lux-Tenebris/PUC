@@ -1,0 +1,58 @@
+A string vazia (ε) pertence ao conjunto.
+
+Se w pertence ao conjunto, então aw, bw e abw também pertencem ao conjunto.
+
+Se v e w pertencem ao conjunto, então vw também pertence ao conjunto.
+
+    A primeira regra garante que o conjunto contenha a string vazia. A segunda regra garante que, se uma string w pertence ao conjunto, então adicionar um a no início (aw), um b no final (bw) ou um ab no meio (abw) resulta em uma string que ainda tem um número par de b's. A terceira regra garante que, se duas strings v e w têm um número par de b's, então a concatenação delas (vw) também tem um número par de b's.
+
+    Essas três regras definem recursivamente o conjunto de todas as strings sobre o alfabeto {a, b} que contêm um número par de b's.
+
+
+2)
+
+(ba) + (ab U a*)
+= (ba) + a*(ba U λ)
+= (ba) + aba*
+= (ba)(ba)* aba*
+= (ba)(ba)* + (ba)(ba)* aba*
+= (ba)* ba+ (ba)* ba aba*
+
+(ba)* ba+ + (b* U λ)
+= (ba)* (ba)+ + λ + b*
+= (ba)* (ba)+ + b*
+= (ba)* (ba)* ba + b*
+(ba)* ba (ba)* ba* + (ba)* λ + b*
+= (ba)* ba (ba)* ba* + (ba)* (ba)* ba* + (ba)* aba* + b*
+= (ba)* ba+ (ba)* ba aba* + b*
+= (ba)* ba+ (ba)* ba aba*
+
+
+b+ (ab U λ) b
+= b (b*) (ab U λ) (b+) b
+= b (ab U λ) (b+) b
+= b (a*) (b b*) (ab U λ) (b b+) b
+= b (a*) b (ab) b U b (b b+) b
+= b (a*) b (ab) b + b (b b+) b+
+
+b (ba U λ) b+
+= b (ba) (ba)* b
+= b (b a*) b (ab) b
+= b (b a*) (b b*) (ab) b + b (b b*) b+
+= b (ab) b (b a*) (b b*) b + b (b b*) b+
+= b (ab) b (a*) b (b b*) b + b (b b*) b+
+= b (ab) b (a*) b b* b + b (b b*) b+
+= b (ab) b (a*) (b b*) b + b (b b*) b+
+
+3)
+(a+) (b+) (a U b)*
+(a U b)* aa (a U b)*
+(b*) (aa) (b*)
+a (a U c)* b (a U c)* b (a U c)* cc
+(a U b)* ab (a U b)* ba (a U b)*
+(a U b U c)* aa (a U b U c)* bb (a U b U c)* cc (a U b U c)*
+a* (b c+)*
+(a U b U c) (a U b U c) (a U b U c)
+(a U b U c U λ) (a U b U c U λ)
+(aUbUc)*((aUbUc)(aUbUc)(aUbUc))(aUbUc)*
+(aa)* b (aa)*
