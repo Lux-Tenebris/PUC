@@ -1,0 +1,35 @@
+Loop 1 - MineBlock - Block.h
+
+real    2m43.508s
+user    5m33.013s
+sys     0m0.024s
+1194495@cabra00:~/P2/TestChain$ cd ..
+1194495@cabra00:~/P2$ cd sequencial/
+1194495@cabra00:~/P2/sequencial$ cd TestChain/
+1194495@cabra00:~/P2/sequencial/TestChain$ ls
+Blockchain.cpp  Block.cpp  LICENSE   README.md   sha256.h            TestChain
+Blockchain.h    Block.h    main.cpp  sha256.cpp  SHA256-LICENSE.txt
+1194495@cabra00:~/P2/sequencial/TestChain$ gcc8 -lstdc++ -o TestChain -std=c++11 -x c++ main.cpp Block.cpp Blockchain.cpp sha256.cpp
+1194495@cabra00:~/P2/sequencial/TestChain$ vim main.cpp 1194495@cabra00:~/P2/sequencial/TestChain$ gcc8 -lstdc++ -o TestChain -std=c++11 -x c++ main.cpp Block.cpp Blockchain.cpp sha256.cpp
+1194495@cabra00:~/P2/sequencial/TestChain$ time ./TestChain
+Mining block 1...
+Block mined: 0000006489b76b7551119e0899c6976b65fd8374d0385664ce621db899131074
+
+real    2m49.819s
+user    2m49.772s
+sys     0m0.000s
+1194495@cabra00:~/P2/sequencial/TestChain$ cd ..
+1194495@cabra00:~/P2/sequencial$ cd ..
+1194495@cabra00:~/P2$ cd TestChain/
+1194495@cabra00:~/P2/TestChain$ vim main.cpp
+1194495@cabra00:~/P2/TestChain$ vim Block.cpp
+1194495@cabra00:~/P2/TestChain$ gcc8 -lstdc++ -fopenmp -o TestChain -std=c++11 -x c++ main.cpp Block.cpp Blockchain.cpp sha256.cpp
+1194495@cabra00:~/P2/TestChain$ time ./TestChain
+Mining block 1...
+Loop 1 - MineBlock - Block.h
+Block mined: 000000026ea2f63ed31d8b9a52763a2befa74752638e0d6a3fe378068fdab276
+
+real    6m49.645s
+user    12m14.978s
+sys     0m0.028s
+1194495@cabra00:~/P2/

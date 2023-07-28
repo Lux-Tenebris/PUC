@@ -1,0 +1,27 @@
+1)
+
+0a 0b S -> aA | bD | cS | <l>
+1a 0b A -> aS | bB | cA
+1a 1b B -> aD | bC | cB
+1a 2b C -> aE | bA | cC
+0a 1b D -> aB | bE | cD
+0a 2b E -> aC | bS | cE
+
+2)
+
+S -> aA | BD
+A -> aA | P1P2 | aD
+B -> aB | aC | BF
+C -> BQ | aAC | E
+D -> bD | aC | BF
+E -> BQ | bC | Q
+F -> aF | aG | a
+G -> a | b
+P1 -> a
+P2 -> AB
+Q -> b
+
+S - S'A | BD
+S' - a
+A - S'A | S'A' | S'D
+A' - AB

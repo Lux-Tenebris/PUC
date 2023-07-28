@@ -1,0 +1,17 @@
+ 
+Execução do programa padrão:
+real 0m1.794s
+user 0m0.787s
+sys  0m0.913s
+
+Execução com o nvprof:
+[CUDA memcpy HtoD]              464.73ms - 95.5%
+sum_cuda(double*, double*, int) 21.51ms  - 4.42%
+
+Código modificado sem __shared__:
+real 0m38.484s
+user 0m29.328s
+sys  0m9.068s
+
+[CUDA memcpy HtoD]              464.18ms - 1.28%
+sum_cuda(double*, double*, int) 36.418s  - 98.72%

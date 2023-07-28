@@ -1,0 +1,122 @@
+1) A)
+S → AB
+A → aA | ε
+B → bB | b
+
+B)
+S → AB
+A → aA | ε
+B → bC
+C → cC | ε
+
+C)
+S → AB
+A → aA | ε
+B → bbbC | bBc | ε
+C → cC | ε
+
+D)
+S → aSc | A
+A → aA | bA | ε
+
+E)
+S → A | B
+A → aA | bA | ε
+B → aB | bB | ε
+C → aB | ε
+
+F)
+A resposta da A se aplica aqui
+
+G)S → aSa | bSb | ε
+
+2)
+A) L = {a^n b^m | n ≥ 2, m ≥ 0}
+B) L = {a^n c^m b^(2n) | n ≥ 1, m ≥ 0}
+C) L = {w ∈ {a, b, c}* | w contém pelo menos uma letra "c"}
+D)L = {w ∈ {a, b, c, d}* | w é uma cadeia da forma (cd)^n (ab)^m, para alguns n, m ≥ 0}
+E) L = {an bn | n ≥ 0}
+F) L = {a^n b^n c^m | n, m ≥ 0}
+
+3)
+A)
+1. S → aS | bS | a | b | a
+2. A → a
+3. B → bb | C
+4. C → cC | c
+
+B)
+S -> bbT | CT | λ
+T -> aS | bS
+C -> bbU | CU
+U -> cU | λ
+
+C)
+S -> AT
+T -> BS
+A -> aA | λ
+B -> Bba
+
+4)
+A)
+S -> P
+P -> AT | A
+A -> BQ | CR | a
+B -> bB | b
+C -> cC | bD
+Q -> bB
+R -> cC
+D -> b
+T -> PS
+
+B)
+S -> A | B | C
+A -> aa | bb | cc | B | C
+B -> bb | cc | A | C
+C -> cc | aa | B | A
+
+5)
+A)
+S -> AA' | ABC | a | AB | A' | AC
+A -> AE | a | AD | a | DE | D | E | A'
+B -> BE | b | E
+C -> F | abc
+A' -> ZB | Z | B
+E -> BZ | BE | b
+D -> AA' | A' | AE | a | AD | a | DE | D | E
+Z -> a
+F -> abc
+
+B)
+S1 -> S3B | S4C
+S3 -> aA
+S4 -> AB
+B1 -> B2C
+B2 -> bB
+A -> aA | a | λ
+B -> bBD | b | B1
+C -> CB | CA | B2 | abc
+D -> cC
+
+C)
+S' -> AB1 | BC | A | B1 | C
+B1 -> XB1 | YY
+X -> b
+Y -> bB1
+C -> ZB2 | c
+Z -> B1a
+B2 -> ZB3 | a
+B3 -> B1 | λ
+A -> a
+
+D)
+S -> ADE | A1 | A2
+A -> a
+D -> E
+E -> F1 | G1 | H1
+F1 -> bF2
+G1 -> cG2
+H1 -> dH2
+F2 -> b
+G2 -> c
+H2 -> d
